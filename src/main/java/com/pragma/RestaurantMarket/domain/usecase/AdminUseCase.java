@@ -17,6 +17,7 @@ public class AdminUseCase implements IOAdminServicePort {
     @Override
     public void saveAdmin(AdminModel adminModel) {
 
+
     }
 
     @Override

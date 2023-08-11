@@ -25,4 +25,10 @@ public class AdminRestController {
 public ResponseEntity<AdminRequestDto> getAllAdmins() {
     return ResponseEntity.ok((AdminRequestDto) adminHandler.getAllAdmins());
 }
+    @PostMapping("/save-owner")
+    public ResponseEntity<Void> saveOwner(@RequestBody AdminRequestDto  adminRequestDto) {
+        adminHandler.saveObject(adminRequestDto);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+
+    }
 }
